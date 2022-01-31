@@ -39,7 +39,7 @@ header .hamburger{
     top: 25px;
     border-radius: 11px;
     padding: 12px;
-    background-color: rgb(98, 141, 73);
+    background-color: rgb(132, 197, 94);
     cursor: pointer;
 }
 header .hamburger .top,
@@ -68,7 +68,7 @@ header.open-sidebar .hamburger .bottom{
 header#sidebar{
     position: fixed;
     z-index: 99;
-    background: rgb(98, 141, 73);
+    background: rgb(132, 197, 94);
     height: 100vh;
     min-width: 200px;
     text-align: left;
@@ -82,6 +82,9 @@ header#sidebar.open-sidebar{
 #sidebar img{
     width: 150px;
     margin-bottom: 25px;
+}
+header#sidebar ul{
+    margin: 0 0 0 -45px;
 }
 header#sidebar li{
     margin-bottom: 25px;
@@ -443,11 +446,11 @@ footer{
         width: 85%;
         margin: 15px auto;
         border: 1px solid #add981;
-        height: 556px;
+        height: 554px;
         position: relative;
     }
     #best .container .card .desc{
-        height: 90px;
+        height: 100px;
     }
 }
 @media screen and (max-width:731px){
@@ -545,6 +548,9 @@ footer{
     }
 }
 @media screen and (max-width:405px){
+    header img{
+        margin-top: 25px;
+    }
     .align-header{
         display: none;
     }
