@@ -1,0 +1,554 @@
+*{
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color:white;
+    background-image:url(./img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+p, li, a, h3, h4, h5{
+    font-family: 'Montserrat';
+}
+h1, h2{
+    font-family: 'Abril Fatface';
+    font-weight: 200;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    object-fit: cover;
+}
+/*HAMBURGER*/
+header .hamburger{
+    width: 25px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: -70px;
+    top: 25px;
+    border-radius: 11px;
+    padding: 12px;
+    background-color: rgb(98, 141, 73);
+    cursor: pointer;
+}
+header .hamburger .top,
+header .hamburger .mid,
+header .hamburger .bottom{
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: 0.8s;
+}
+header.open-sidebar .hamburger .top{
+    transform: rotate(45deg);
+    position: relative;
+    top: 12px;
+    width: 35px;
+}
+header.open-sidebar .hamburger .mid{
+    opacity: 0;
+}
+header.open-sidebar .hamburger .bottom{
+    transform: rotate(-45deg);
+    position: relative;
+    top: -11px;
+    width: 35px;
+}
+header#sidebar{
+    position: fixed;
+    z-index: 99;
+    background: rgb(98, 141, 73);
+    height: 100vh;
+    min-width: 200px;
+    text-align: left;
+    padding: 0 20px 0 30px;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+header#sidebar.open-sidebar{
+    transform: translateX(0%);
+}
+#sidebar img{
+    width: 150px;
+    margin-bottom: 25px;
+}
+header#sidebar li{
+    margin-bottom: 25px;
+}
+header#sidebar li a,
+header#sidebar p{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+header#sidebar h2 a{
+    color: #333;
+    font-size: 1.2em;
+    display: block;
+    margin: 20px 0 50px 0;
+}
+/*----------------HEADER-----------------*/
+header{
+    padding: 30px 40px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 760px;
+}
+header nav img{
+    width: 180px;
+}
+header nav a{
+    color: #fff;
+    font-size: 1.20em;
+    font-weight: 500;
+}
+.align-header{
+    margin: 190px 0 0 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 680px;
+}
+header .slogan{
+    color: white;
+    font-size: 8em;
+    line-height: 130px;
+}
+header a{
+    color: white;
+    font-size: 1.1em;
+}
+/*--------------MAIN----------------*/
+main{
+    margin-top: 110px;
+}
+/*-----------FONCTIONNEMENT------------*/
+.fonctionnement{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    padding: 15px;
+    margin: 0 auto;
+}
+.fonctionnement li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+}
+.fonctionnement li i{
+    color: #add981;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+}
+.fonctionnement li h3{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+/*-----------MAIN------------*/
+main .card .desc .add{
+    display: none;
+}
+main h2{
+    font-size: 6em;
+    margin: 10px 0 0 0;
+}
+main .under-title{
+    background-color: #add981;
+    height: 12px;
+    width: 70px;
+    border: none;
+    margin: -10px 0 0 0;
+}
+/*ELEMENTS COMMUNS*/
+main .card .desc .np{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    height: 56px;
+    margin-left: 15px;
+}
+main .card .desc .np h5{
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0;
+}
+main .card .desc .np p{
+    color: #add981;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+}
+main .card .desc .more a{
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    background-color: #add981;
+    padding: 12px 20px;
+    border-radius: 25px;
+    margin-right: 25px;
+}
+/*FIN ELEMENTS COMMUNS*/
+/*-----------MEILLEURES VENTES--------------*/
+#best{
+    margin: 150px auto 300px auto;
+    width: 85%;
+}
+#best .container{
+    margin: 50px 0;
+    display: flex;
+}
+#best .container .card{
+    width: 25%;
+    position: relative;
+}
+#best .container .card img{
+    width: 100%;
+    height:550px;
+}
+#best .container .card .desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+}
+#best .container .color-w{
+    background-color: rgba(255, 255, 255, 0.836);
+}
+#best .container .color-t{
+    background-color: #ffffffe8;
+}
+/*----------------NOS PLANTES----------------*/
+#plantes{
+    margin: 0 auto 150px auto;
+    width: 85%;
+}
+#plantes .container-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 65px 0 0 0;
+}
+#plantes .container-top .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#plantes .container-top .left,
+#plantes .container-top .right{
+    width: 48.8%;
+}
+#plantes .card img{
+    width: 100%;
+}
+#plantes .container-top .left img{
+    height: 890px;
+}
+#plantes .container-top .right img{
+    height: 425px;
+}
+#plantes .container-top .card,
+#plantes .container-bottom .card{
+    position: relative;
+}
+#plantes .desc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.904);
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 90px;
+}
+#plantes .card .desc .np{
+    margin-left: 35px;
+}
+
+#plantes .card .desc .np p{
+    font-size: 1.2em;
+}
+#plantes .card .desc .more a{
+    margin-right: 35px;
+}
+
+#plantes .container-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+#plantes .container-bottom .next{
+    width: 25.5%;
+}
+#plantes .container-bottom .mid{
+    width: 45%;
+}
+#plantes .container-bottom img{
+    height: 910px;
+}
+/*----------------FOOTER----------------*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+@media screen and (max-width:1830px){
+    .align-header{
+        margin: 100px 0 80px 110px;
+        height: 600px;
+    }
+}
+@media screen and (max-width:1584px){
+    .align-header{
+        margin: 100px 0 40px 110px;
+        height: 500px;
+    }
+    .fonctionnement{
+        width: 90%;
+    }
+    #best{
+        margin: 100px auto 100px auto;
+        width: 95%;
+    }
+    #plantes{
+        margin: 0 auto 150px auto;
+        width: 95%;
+    }
+    footer{
+        width: 95%;
+    }
+}
+@media screen and (max-width:1417px){
+    main .card .desc .more a{
+        padding: 8px 8px;
+    }
+    #plantes .container-bottom .next{
+        width: 32%;
+    }
+    #plantes .container-bottom .mid{
+        width: 32%;
+    }
+    main .card .desc .np{
+        margin-left: 5px;
+    }
+    main .card .desc .more a{
+        margin-right: 5px;
+    }
+    #plantes .card .desc .np{
+        margin-left: 8px;
+    }
+    #plantes .card .desc .more a{
+        margin-right: 8px;
+    }
+}
+@media screen and (max-width:1361px){
+    .align-header{
+        margin: 0 0 50px 50px;
+        height: 450px;
+    }
+}
+@media screen and (max-width:1117px){
+    header .hamburger{
+        display: flex;
+    }
+    header{
+        padding: 10px 0;
+    }
+    header nav{
+        max-width: 100px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    header nav img{
+        width: 200px;
+        text-align: center;
+    }
+    .element-nav{
+        display: none;
+    }
+    .align-header{
+        margin: 10px 0 20px 50px;
+        height: 340px;
+    }
+    header .slogan{
+        color: white;
+        font-size: 6em;
+        line-height: 100px;
+    }
+    main .card .desc .add{
+        display: block;
+    }
+    main .card .desc .more a{
+        font-size: 2em;
+        font-weight: 500;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        margin-right: 5px;
+    }
+    main .card .desc .more .savoir{
+        display: none;
+    }
+}
+@media screen and (max-width:879px){
+    .align-header{
+        margin: 10px 0 0 30px;
+        height: 250px;
+    }
+    header .slogan{
+        color: white;
+        font-size: 4em;
+        line-height: 60px;
+    }
+    main h2{
+        font-size: 4em;
+        margin: 10px 0 0 0;
+    }
+}
+@media screen and (max-width:810px){
+    #best .container{
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #best .container .card{
+        width: 85%;
+        margin: 15px auto;
+        border: 1px solid #add981;
+        height: 556px;
+        position: relative;
+    }
+    #best .container .card .desc{
+        height: 90px;
+    }
+}
+@media screen and (max-width:731px){
+    .align-header{
+        margin: 10px 0 40px 30px;
+        height: 105px;
+    }
+    header .slogan{
+        color: white;
+        font-size: 3em;
+        line-height: 50px;
+    }
+    header  .align-header a{
+        display: none;
+    }
+    .fonctionnement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .fonctionnement li{
+        margin: 10px auto;
+        width: 85%;
+        padding: 0;
+        text-align: center;
+    }
+    .fonctionnement li i{
+        color: #add981;
+        font-size: 3.5em;
+        margin-bottom: 30px;
+    }
+    .fonctionnement li h3{
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width:695px){
+    main h2{
+        font-size: 3em;
+        margin: 10px 0 0 0;
+    }
+    #plantes .container-top{
+        flex-direction: column;
+        margin: 65px 0 0 0;
+    }
+    #plantes .container-top .right{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #plantes .container-top .left,
+    #plantes .container-top .right{
+        margin: 0 auto;
+        width: 95%;
+    }
+    #plantes .card img{
+            width: 100%;
+    }
+    #plantes .container-top .left img{
+        height: 700px;
+    }
+    #plantes .container-top .right img{
+        height: 410px;
+    }
+    #plantes .container-bottom{
+        flex-direction: column;
+        width: 100%;
+        margin: 40px auto 0 auto;
+    }
+    #plantes .container-bottom .next,
+    #plantes .container-bottom .mid{
+        margin: 10px auto;
+        width: 80%;
+    }
+    #plantes .container-bottom img{
+        width: 100%;
+        height: 380px;
+    }
+}
+@media screen and (max-width:519px){
+    .align-header{
+        margin: 10px 0 40px 30px;
+        height: 55px;
+    }
+    header .slogan{
+        font-size: 2em;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width:405px){
+    .align-header{
+        display: none;
+    }
+    header .slogan{
+        display: none;
+    }
+}
