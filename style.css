@@ -474,18 +474,18 @@ footer{
         margin: 0 auto;
     }
     .fonctionnement li{
-        margin: 10px auto;
+        margin: 20px auto;
         width: 85%;
         padding: 0;
         text-align: center;
     }
     .fonctionnement li i{
         color: #add981;
-        font-size: 3.5em;
+        font-size: 3em;
         margin-bottom: 30px;
     }
     .fonctionnement li h3{
-        font-size: 1.6em;
+        font-size: 1.3em;
         font-weight: 600;
     }
     footer{
@@ -494,9 +494,15 @@ footer{
     }
 }
 @media screen and (max-width:695px){
+    main{
+        margin-top: 30px;
+    }
     main h2{
         font-size: 3em;
         margin: 10px 0 0 0;
+    }
+    #best{
+        margin: 20px auto 10px auto;
     }
     #plantes .container-top{
         flex-direction: column;
